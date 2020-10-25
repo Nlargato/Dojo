@@ -8,11 +8,11 @@ seja executado dentro da VM do Windows 10 envie a frase para o handler.
 
 import socket 
 
-host, port = '10.10.10.109', 443
+host, port = '127.0.0.1', 443
 
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((host, port))
 
-client.send(b"Hacking Dojo")
+client.sendall(b"Hacking Dojo")
                        
